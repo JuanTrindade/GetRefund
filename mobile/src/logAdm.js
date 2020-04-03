@@ -18,6 +18,7 @@ export default function loginAdm({ navigation }){
     {
         Alert.alert('usuario: ' + log + " " + 
         "senha: " + logpass);
+        navigation.navigate('HomeAdm');
     }
 
     return(

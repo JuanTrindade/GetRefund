@@ -37,7 +37,8 @@ export default function CadUser({ navigation }){
             <TextInput
             value={email}
             onChangeText={setEmail}
-            autoCapitalize="none" 
+            autoCapitalize="none"
+            autoCompleteType='email' 
             style={styles.input}
             ></TextInput>
 

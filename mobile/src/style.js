@@ -17,6 +17,7 @@ export default StyleSheet.create({
       justifyContent: 'center',
       fontStyle: 'italic'
   },
+
   textL:{
     fontSize: 20,
     justifyContent: 'center',
@@ -70,5 +71,10 @@ export default StyleSheet.create({
     },
     flx:{
       flexDirection: 'row'
+    },
+    homeadmText:{
+      fontSize: 22,
+      textDecorationStyle: 'double',
+      marginBottom: 20
     }
   });

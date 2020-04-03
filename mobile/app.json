@@ -2,6 +2,9 @@
   "expo": {
     "name": "GetRefund",
     "slug": "GetRefund",
+    "android":{
+      "package":"com.GetRefund.juan"
+    },
     "platforms": [
       "ios",
       "android",
@@ -9,9 +12,8 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/refund.png",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

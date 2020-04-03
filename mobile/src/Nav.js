@@ -6,6 +6,9 @@ import cadastrar from './cad';
 import login from './login';
 import loginAdm from './logAdm';
 import CadUser from './CadUser';
+import HomeAdm from './HomeAdm';
+import HomeUser from './HomeUser';
+import cameraPage from './camera';
 
 export default createAppContainer(
     createSwitchNavigator({
@@ -13,6 +16,10 @@ export default createAppContainer(
         cadastrar,
         login,
         loginAdm,
-        CadUser
+        CadUser,
+        HomeAdm,
+        HomeUser,
+        cameraPage
+
     })
 );

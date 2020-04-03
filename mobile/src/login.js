@@ -18,6 +18,7 @@ export default function login({ navigation }){
     {
         Alert.alert('usuario: ' + user + " " + 
         "senha: " + pass);
+        navigation.navigate('HomeUser');
     }
 
     return(
