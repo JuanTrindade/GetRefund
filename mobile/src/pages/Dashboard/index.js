@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
@@ -21,6 +22,8 @@ const sampleData = [{
 }]
 
 export default function Dashboard() {
+  const { navigate } = useNavigation();
+
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <Image
@@ -35,7 +38,8 @@ export default function Dashboard() {
           style={[styles.title, {color: '#2ecc9c'}]}
           numberOfLines={1}>R$ {item.value}</Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigate('Solicitation')}>
           <Text
             style={styles.buttonText}
             numberOfLines={1}>Ver mais detalhes</Text>

@@ -34,7 +34,6 @@ export default function Routes(){
         name="Solicitation"
         component={Solicitation}
         options={{headerTitle: 'Solicitação'}}/>
-
     </Stack.Navigator>
   );
 }
