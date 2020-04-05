@@ -2,8 +2,9 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import cadastrar from './cad';
-import login from './login';
+import Start from './pages/Start';
+import Signin from './pages/Signin';
+
 import loginAdm from './logAdm';
 import CadUser from './CadUser';
 import HomeAdm from './HomeAdm';
@@ -16,11 +17,11 @@ export default function Routes(){
   return(
     <Stack.Navigator headerMode='none'>
       <Stack.Screen
-        name="cad"
-        component={cadastrar}/>
+        name="Start"
+        component={Start}/>
       <Stack.Screen
-        name="login"
-        component={login}/>
+        name="Signin"
+        component={Signin}/>
       <Stack.Screen
         name="loginAdm"
         component={loginAdm}/>
