@@ -3,7 +3,7 @@
     "name": "GetRefund",
     "slug": "GetRefund",
     "android":{
-      "package":"com.GetRefund.juan"
+      "package":"com.qualityentregas.getrefund"
     },
     "platforms": [
       "ios",
@@ -12,7 +12,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/refund.png",
+    "icon": "./assets/icon.png",
     "splash": {
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
