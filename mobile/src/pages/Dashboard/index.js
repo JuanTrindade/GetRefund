@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList, Image } from 'react-native';
+import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
@@ -28,9 +28,18 @@ export default function Dashboard() {
         style={styles.itemPicture} />
 
       <View style={styles.aside}>
-        <Text style={styles.title} numberOfLines={1}>Reembolso {item.id}</Text>
-        <Text style={[styles.title, {color: '#2ecc9c'}]} numberOfLines={1}>R$ {item.value}</Text>
-        <Text style={styles.personName} numberOfLines={1}>{item.person}</Text>
+        <Text
+          style={styles.title}
+          numberOfLines={1}>Reembolso {item.id}</Text>
+        <Text
+          style={[styles.title, {color: '#2ecc9c'}]}
+          numberOfLines={1}>R$ {item.value}</Text>
+
+        <TouchableOpacity>
+          <Text
+            style={styles.buttonText}
+            numberOfLines={1}>Ver mais detalhes</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -43,7 +52,8 @@ export default function Dashboard() {
       <FlatList
         data={sampleData}
         keyExtractor={item => item.id}
-        renderItem={renderItem}/>
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}/>
     </View>
   );
 }

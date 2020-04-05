@@ -49,4 +49,10 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     margin: 8,
   },
+
+  buttonText: {
+    color: '#2ecc9c',
+    fontSize: 16,
+    margin: 8,
+  }
 });

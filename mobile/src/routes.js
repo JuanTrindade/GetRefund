@@ -6,9 +6,7 @@ import Start from './pages/Start';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
-
-import HomeUser from './HomeUser';
-import cameraPage from './camera';
+import Solicitation from './pages/Solicitation';
 
 const Stack = createStackNavigator();
 
@@ -33,11 +31,10 @@ export default function Routes(){
         component={Dashboard}
         options={{headerTitle: 'Início'}}/>
       <Stack.Screen
-        name="HomeUser"
-        component={HomeUser}/>
-      <Stack.Screen
-        name="cameraPage"
-        component={cameraPage}/>
+        name="Solicitation"
+        component={Solicitation}
+        options={{headerTitle: 'Solicitação'}}/>
+
     </Stack.Navigator>
   );
 }
