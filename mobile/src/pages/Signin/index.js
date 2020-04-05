@@ -33,7 +33,8 @@ export default function Signin(){
           style={styles.input} />
 
         <TouchableOpacity
-          style={styles.button}>
+          style={styles.button}
+          onPress={() => navigate('Dashboard')}>
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
 

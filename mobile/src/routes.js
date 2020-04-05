@@ -5,10 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Start from './pages/Start';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
+import Dashboard from './pages/Dashboard';
 
-import loginAdm from './logAdm';
-import CadUser from './CadUser';
-import HomeAdm from './HomeAdm';
 import HomeUser from './HomeUser';
 import cameraPage from './camera';
 
@@ -29,9 +27,11 @@ export default function Routes(){
         name="Signup"
         component={Signup}
         options={{headerShown: false}}/>
+
       <Stack.Screen
-        name="HomeAdm"
-        component={HomeAdm}/>
+        name="Dashboard"
+        component={Dashboard}
+        options={{headerTitle: 'Início'}}/>
       <Stack.Screen
         name="HomeUser"
         component={HomeUser}/>
