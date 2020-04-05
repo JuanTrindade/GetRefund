@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { KeyboardAvoidingView, Text, TouchableOpacity, Alert, TextInput, Image, View } from 'react-native';
 import styles from './style';
 import { Feather, FontAwesome } from '@expo/vector-icons';
-import logo from '../assets/logo.png';
+import logo from './assets/img/logo.png';
 import cameraPage from './camera';
 
 export default function HomeUser({ navigation, route }){
@@ -22,13 +22,13 @@ export default function HomeUser({ navigation, route }){
     }
 
     return(
-        <KeyboardAvoidingView 
+        <KeyboardAvoidingView
         style={styles.container}>
 
             <Image source={logo} style={{ marginBottom: 130 }} />
 
             <Text style={styles.label}>Valor</Text>
-            <TextInput 
+            <TextInput
             style={styles.input}
             autoCapitalize='none'
             keyboardType='numeric'
@@ -36,7 +36,7 @@ export default function HomeUser({ navigation, route }){
 
             <View style={styles.flx}>
 
-            <TouchableOpacity 
+            <TouchableOpacity
             onPress={photo}
             style={styles.buttonLog}
             >
@@ -44,7 +44,7 @@ export default function HomeUser({ navigation, route }){
                 <Text style={styles.text}>Tirar foto</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity 
+            <TouchableOpacity
             onPress={send}
             style={styles.buttonBack}
             >
@@ -54,7 +54,7 @@ export default function HomeUser({ navigation, route }){
 
             </View>
 
-            <TouchableOpacity 
+            <TouchableOpacity
             onPress={back}
             style={styles.button}
             >

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, TouchableOpacity, Text, Image, TextInput, KeyboardAvoidingView, Alert } from 'react-native';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import styles from './style';
-import logo from '../assets/logo.png'
+import logo from './assets/img/logo.png'
 import { HeaderTitle } from '@react-navigation/stack';
 
 
@@ -21,7 +21,7 @@ export default function loginAdm({ navigation }){
     }
 
     return(
-        <KeyboardAvoidingView 
+        <KeyboardAvoidingView
         style={styles.container}
         beahvior="padding"
         >
@@ -30,12 +30,12 @@ export default function loginAdm({ navigation }){
             <Text style={styles.label}>Nome de usuario<Feather name="user" size={23, 23} /></Text>
             <TextInput
             value={log}
-            onChangeText={setLog} 
+            onChangeText={setLog}
             style={styles.input}
             ></TextInput>
 
             <Text style={styles.label}>Senha <Feather name="lock" size={23, 23} /></Text>
-            <TextInput 
+            <TextInput
             value={logpass}
             onChangeText={setLogPass}
             secureTextEntry={true}
@@ -44,21 +44,21 @@ export default function loginAdm({ navigation }){
             ></TextInput>
 
         <View style={styles.flx}>
-            <TouchableOpacity 
+            <TouchableOpacity
             style={styles.buttonLog}
             onPress={login}
             >
                 <Text style={styles.textL}>Login</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity 
+            <TouchableOpacity
             style={styles.buttonBack}
             onPress={Back}
             >
                 <Text style={styles.textL}>Voltar</Text>
             </TouchableOpacity>
             </View>
-            
+
         </KeyboardAvoidingView>
     );
 }

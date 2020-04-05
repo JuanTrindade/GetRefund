@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, Alert, Image } from 'react-native';
 import styles from './style';
-import logo from '../assets/logo.png';
+import logo from './assets/img/logo.png';
 
 export default function CadUser({ navigation }){
 
@@ -20,7 +20,7 @@ export default function CadUser({ navigation }){
     }
 
     return(
-        <KeyboardAvoidingView 
+        <KeyboardAvoidingView
         style={styles.container}
         >
 
@@ -29,7 +29,7 @@ export default function CadUser({ navigation }){
             <Text style={styles.label}>Nome de usuario</Text>
             <TextInput
             value={usern}
-            onChangeText={setUsern} 
+            onChangeText={setUsern}
             style={styles.input}
             ></TextInput>
 
@@ -38,21 +38,21 @@ export default function CadUser({ navigation }){
             value={email}
             onChangeText={setEmail}
             autoCapitalize="none"
-            autoCompleteType='email' 
+            autoCompleteType='email'
             style={styles.input}
             ></TextInput>
 
             <Text style={styles.label}>Senha</Text>
             <TextInput
             value={passn}
-            onChangeText={setPassn} 
+            onChangeText={setPassn}
             secureTextEntry={true}
-            autoCapitalize="none" 
+            autoCapitalize="none"
             style={styles.input}
             ></TextInput>
 
         <View style={styles.flx}>
-            <TouchableOpacity 
+            <TouchableOpacity
             style={styles.buttonLog}
             onPress={UserCad}
             >

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Text, View, TouchableOpacity, Image, Modal } from 'react-native';
 import { Camera } from 'expo-camera';
 import {Entypo, AntDesign} from '@expo/vector-icons';
-import logo from '../assets/logo.png';
+import logo from './assets/img/logo.png';
 
 export default function cameraPage({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null);
@@ -35,8 +35,8 @@ export default function cameraPage({ navigation }) {
   }
   return (
     <View style={{ flex: 1 }}>
-      <Camera 
-      style={{ flex: 1 }} 
+      <Camera
+      style={{ flex: 1 }}
       type={type}
       ref={camref}
       >
@@ -60,8 +60,8 @@ export default function cameraPage({ navigation }) {
         </View>
       </Camera>
 
-    {capturedphoto && 
-      
+    {capturedphoto &&
+
       <Modal
       animationType='slide'
       transparent={false}
@@ -69,22 +69,22 @@ export default function cameraPage({ navigation }) {
       >
     <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', margin: 20 }}>
 
-        <TouchableOpacity 
-        style={{margin: 10, marginTop: 50}} 
+        <TouchableOpacity
+        style={{margin: 10, marginTop: 50}}
         onPress={() => setOpen(false)}
         onPress={back}
         >
             <AntDesign name='checkcircle' size={50} color='#000' />
         </TouchableOpacity>
-        <TouchableOpacity 
-        style={{margin: 10, marginTop: 50}} 
+        <TouchableOpacity
+        style={{margin: 10, marginTop: 50}}
         onPress={() => setOpen(false)}
         >
             <AntDesign name='closecircle' size={50} color='#000' />
         </TouchableOpacity>
         </View>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', margin: 20 }}>
-        <Image 
+        <Image
         style={{ width: '100%', height: 300, borderRadius: 20, marginBottom: 145 }}
         source={{ uri: capturedphoto }}
         />
@@ -96,6 +96,6 @@ export default function cameraPage({ navigation }) {
   function back()
   {
       navigation.navigate('HomeUser');
-      
+
   }
 }

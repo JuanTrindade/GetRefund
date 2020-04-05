@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, TouchableOpacity, Text, Image, TextInput, KeyboardAvoidingView, Alert } from 'react-native';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import styles from './style';
-import logo from '../assets/logo.png'
+import logo from './assets/img/logo.png'
 import * as MailComposer from 'expo-mail-composer';
 
 export default function login({ navigation }){
@@ -16,7 +16,7 @@ export default function login({ navigation }){
 
     function login()
     {
-        Alert.alert('usuario: ' + user + " " + 
+        Alert.alert('usuario: ' + user + " " +
         "senha: " + pass);
         navigation.navigate('HomeUser');
     }
@@ -31,7 +31,7 @@ export default function login({ navigation }){
     }
 
     return(
-        <KeyboardAvoidingView 
+        <KeyboardAvoidingView
         style={styles.container}
         beahvior="padding"
         >
@@ -40,12 +40,12 @@ export default function login({ navigation }){
             <Text style={styles.label}>Usuario<Feather name="user" size={23, 23} /></Text>
             <TextInput
             value={user}
-            onChangeText={setUser} 
+            onChangeText={setUser}
             style={styles.input}
             ></TextInput>
 
             <Text style={styles.label}>Senha <Feather name="lock" size={23, 23} /></Text>
-            <TextInput 
+            <TextInput
             value={pass}
             onChangeText={setPass}
             secureTextEntry={true}
@@ -54,14 +54,14 @@ export default function login({ navigation }){
             ></TextInput>
 
         <View style={styles.flx}>
-            <TouchableOpacity 
+            <TouchableOpacity
             style={styles.buttonLog}
             onPress={login}
             >
                 <Text style={styles.textL}>Login</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity 
+            <TouchableOpacity
             style={styles.buttonBack}
             onPress={Back}
             >
@@ -73,7 +73,7 @@ export default function login({ navigation }){
             >
                 <Text style={{ fontSize: 17, color: '#000', marginTop: 30 }}>Teste mail composer</Text>
             </TouchableOpacity>
-            
+
         </KeyboardAvoidingView>
     );
 }
