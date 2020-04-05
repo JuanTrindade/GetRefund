@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './src/Nav';
+import Routes from './src';
 
 export default function App(){
   return(
