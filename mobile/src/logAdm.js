@@ -3,6 +3,7 @@ import { View, TouchableOpacity, Text, Image, TextInput, KeyboardAvoidingView, A
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import styles from './style';
 import logo from '../assets/logo.png'
+import { HeaderTitle } from '@react-navigation/stack';
 
 
 export default function loginAdm({ navigation }){
@@ -11,14 +12,12 @@ export default function loginAdm({ navigation }){
     const[logpass, setLogPass] = useState("");
 
     function Back(){
-        navigation.navigate('Main');
+        navigation.navigate('index');
     }
 
     function login()
     {
-        Alert.alert('usuario: ' + log + " " + 
-        "senha: " + logpass);
-        navigation.navigate('HomeAdm');
+        navigation.navigate('HomeAdm', {nome: log});
     }
 
     return(

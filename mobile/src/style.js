@@ -75,6 +75,10 @@ export default StyleSheet.create({
     homeadmText:{
       fontSize: 22,
       textDecorationStyle: 'double',
-      marginBottom: 20
-    }
+      marginBottom: 10
+    },
+    image: {
+      width: '100%',
+      height: 250
+  }
   });

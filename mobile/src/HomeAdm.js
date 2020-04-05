@@ -5,42 +5,41 @@ import styles from './style';
 import { Feather, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
 
 
-export default function HomeAdm({ navigation }) {
+export default function HomeAdm({ navigation, route }) {
 
     const name = "Dayane Trindade";
-    const [value, setValor] = useState(137.80);
-
-   if (value <= 0 || !refund || !RefundCancel) {
-       Alert.alert("Ops!" , "Nenhum reembolso pendente ;D");
-       navigation.navigate("Main");
-   }
+    const [value, setValor] = useState(376);
     
 
    function refund()
    {
        Alert.alert("Aprovado!", "Reembolso aprovado com sucesso :D");
        setValor(value == 0);
-       navigation.navigate('Main');
+       navigation.navigate('index');
    }
 
    function RefundCancel()
    {
      Alert.alert("Cancelado!" , "Valor cancelado");
      setValor(value == 0);
-     navigation.navigate('Main');
+     navigation.navigate('index');
    }
+
+   if (value <= 0) {
+      navigation.navigate("index");
+    }
 
   return (
     <View style={styles.container}>
 
-    <Image source={perfil} style={{ marginTop: 30, width: 170, height: 170}} />
+    <Image source={perfil} style={styles.image} />
 
     <View style={styles.pd} />
      
-  <Text style={styles.homeadmText}>Olá {name}</Text>
+  <Text style={styles.homeadmText}>Olá {route.params.nome}</Text>
   <Text style={styles.textC}>Valor á ser reembolsado: R${value}</Text>
 
-  <View style={{marginBottom: 50}} />
+  <View style={{marginBottom: 30}} />
 
       <TouchableOpacity 
       style={styles.button}

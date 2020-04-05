@@ -11,7 +11,7 @@ export default function CadUser({ navigation }){
 
     function backHome()
     {
-        navigation.navigate('Main')
+        navigation.navigate('index');
     }
 
     function UserCad()

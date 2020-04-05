@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Text, View, TouchableOpacity, Image, Modal } from 'react-native';
 import { Camera } from 'expo-camera';
 import {Entypo, AntDesign} from '@expo/vector-icons';
+import logo from '../assets/logo.png';
 
 export default function cameraPage({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null);
@@ -91,9 +92,10 @@ export default function cameraPage({ navigation }) {
       </Modal>
     }
     </View>
-  );
+  )
   function back()
   {
       navigation.navigate('HomeUser');
+      
   }
 }

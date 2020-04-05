@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, Image, TextInput, KeyboardAvoidingView, A
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import styles from './style';
 import logo from '../assets/logo.png'
-
+import * as MailComposer from 'expo-mail-composer';
 
 export default function login({ navigation }){
 
@@ -11,7 +11,7 @@ export default function login({ navigation }){
     const[pass, setPass] = useState("");
 
     function Back(){
-        navigation.navigate('Main');
+        navigation.navigate('index');
     }
 
     function login()
@@ -19,6 +19,15 @@ export default function login({ navigation }){
         Alert.alert('usuario: ' + user + " " + 
         "senha: " + pass);
         navigation.navigate('HomeUser');
+    }
+
+    function SendEmail()
+    {
+        MailComposer.composeAsync({
+            subject: "teste de mail composer",
+            recipients: ['juantrindade123@gmail.com'],
+            body: 'teste, ola isso é um teste keke'
+        })
     }
 
     return(
@@ -59,6 +68,11 @@ export default function login({ navigation }){
                 <Text style={styles.textL}>Voltar</Text>
             </TouchableOpacity>
             </View>
+            <TouchableOpacity
+            onPress={SendEmail}
+            >
+                <Text style={{ fontSize: 17, color: '#000', marginTop: 30 }}>Teste mail composer</Text>
+            </TouchableOpacity>
             
         </KeyboardAvoidingView>
     );

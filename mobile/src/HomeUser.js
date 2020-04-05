@@ -3,11 +3,12 @@ import { KeyboardAvoidingView, Text, TouchableOpacity, Alert, TextInput, Image, 
 import styles from './style';
 import { Feather, FontAwesome } from '@expo/vector-icons';
 import logo from '../assets/logo.png';
+import cameraPage from './camera';
 
-export default function HomeUser({ navigation }){
+export default function HomeUser({ navigation, route }){
 
     function back(){
-        navigation.navigate('Main');
+        navigation.navigate('index');
     }
 
     function photo()
@@ -57,7 +58,7 @@ export default function HomeUser({ navigation }){
             onPress={back}
             style={styles.button}
             >
-                <Text style={styles.text}>Voltar</Text>
+                <Text style={styles.textL}>Voltar</Text>
             </TouchableOpacity>
         </KeyboardAvoidingView>
     );

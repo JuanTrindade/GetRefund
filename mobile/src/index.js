@@ -7,7 +7,7 @@ import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 export default function Main({ navigation }) {
 
   function handlepress(){
-    navigation.navigate('cadastrar');
+    navigation.navigate('cad');
   }
   
   function handlenavigate(){
